@@ -15,10 +15,27 @@
 (function() {
   'use strict';
 
-  var swRegistration = null;
-  var isSubscribed = false;
-  var pushButton = document.getElementById ('butPush');
-  const applicationServerPublicKey = 'BKhjxyoSi-_H7MTSEi2HfVJZdZZRaDLI4-rOidpyFS6LeIIb378d2burXUgGtlrM13AMfMprPHzBfb6syH-o6Hg';
+    /** 
+     * @const applicationServerPublicKey 
+     * 
+     * To use push notifications you should get an public api key 
+     *
+     * @link https://web-push-codelab.glitch.me/
+     */
+    const applicationServerPublicKey = 'BKhjxyoSi-_H7MTSEi2HfVJZdZZRaDLI4-rOidpyFS6LeIIb378d2burXUgGtlrM13AMfMprPHzBfb6syH-o6Hg'; 
+  
+  
+    /** @var swRegistration */
+    var swRegistration = null;
+    
+    
+    /** @var isSubscribed Boolean */
+    var isSubscribed = false;
+  
+  
+    /** @var pushButton Element */
+    var pushButton = document.getElementById ('butPush');
+  
   
   function urlB64ToUint8Array(base64String) {
     const padding = '='.repeat((4 - base64String.length % 4) % 4);
